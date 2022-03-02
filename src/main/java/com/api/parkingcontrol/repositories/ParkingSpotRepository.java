@@ -8,6 +8,9 @@ import java.util.UUID;
 
 @Repository
 public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID> {
+    //interface central na abstração do repositório Spring Data
+    //é preciso a classe de domínio para gerenciar, e o tipo de ID da classe de domínio como argumentos:
+    // "extends JpaRepository<ParkingSpotModel, UUID> "
     boolean existsByLicensePlateCar(String licensePlateCar);
 
     boolean existsByParkingSpotNumber(String parkingSpotNumber);
