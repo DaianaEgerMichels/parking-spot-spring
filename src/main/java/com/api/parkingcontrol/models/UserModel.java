@@ -11,7 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name="TB_USER")
 public class UserModel implements UserDetails,Serializable {
-
+// o userDetails é o usuario padrão do spring security
     private static final long serialVersionUID = 1L;
 
     @Id

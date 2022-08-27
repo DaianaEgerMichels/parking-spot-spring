@@ -24,7 +24,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     //método para substituir as configurações padrão do usuário do spring security:
     @Override
-    protected  void configure(AuthenticationManagerBuilder auth){
+    protected  void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("Admin")
                 .password(passwordEncoder().encode("270822"))
